@@ -36,7 +36,7 @@ const Navbar = () => {
             }
             setIsSearching(true);
             try {
-                const res = await axios.get('http://localhost:5001/api/materials');
+                const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/materials`);
                 const filtered = res.data.filter(m =>
                     m.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                     m.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||

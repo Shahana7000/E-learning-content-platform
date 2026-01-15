@@ -17,7 +17,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const loginPromise = axios.post('http://localhost:5001/api/auth/login', formData);
+        const loginPromise = axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/auth/login`, formData);
 
         toast.promise(loginPromise, {
             loading: 'Authenticating credentials...',

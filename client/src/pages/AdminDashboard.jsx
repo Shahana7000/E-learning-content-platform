@@ -32,7 +32,7 @@ const AdminDashboard = () => {
 
     const fetchUniversities = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/universities');
+            const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/universities`);
             setUniversities(res.data);
         } catch (err) {
             console.error('Fetch error:', err);
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
 
     const fetchMaterials = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/materials');
+            const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/materials`);
             setAllMaterials(res.data);
         } catch (err) {
             console.error('Fetch error:', err);
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
 
     const handleUniSubmit = async (e) => {
         e.preventDefault();
-        const promise = axios.post('http://localhost:5001/api/universities', uniForm);
+        const promise = axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/universities`, uniForm);
         toast.promise(promise, {
             loading: 'Registering university...',
             success: () => {
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
 
     const handleMatSubmit = async (e) => {
         e.preventDefault();
-        const promise = axios.post('http://localhost:5001/api/materials', matForm);
+        const promise = axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/materials`, matForm);
         toast.promise(promise, {
             loading: 'Uploading resource...',
             success: () => {

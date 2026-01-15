@@ -41,8 +41,8 @@ const Materials = () => {
         // setLoading(true);
         try {
             const [matRes, uniRes] = await Promise.all([
-                axios.get(`http://localhost:5001/api/materials?universityId=${universityId}`),
-                axios.get('http://localhost:5001/api/universities')
+                axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/materials?universityId=${universityId}`),
+                axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/universities`)
             ]);
 
             setRawMaterials(matRes.data);

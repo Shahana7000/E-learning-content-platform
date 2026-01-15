@@ -37,7 +37,7 @@ const Home = () => {
     useEffect(() => {
         const loadUniversities = async () => {
             try {
-                const res = await axios.get('http://localhost:5001/api/universities');
+                const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/api/universities`);
                 setUniversities(res.data);
             } catch (err) {
                 console.error('Failed to load universities:', err);
