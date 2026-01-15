@@ -11,6 +11,7 @@
 - **Advanced Filtering**: Real-time search and filter capabilities for years, semesters, and resource types.
 - **Hierarchical Back-Navigation**: A smart navigation system that returns to the previous logical step (e.g., from Subject view to Course view).
 - **Premium UI**: Modern, glassmorphic design featuring smooth animations powered by **Framer Motion**.
+- **SPA Deployment Ready**: Includes `vercel.json` for seamless routing on Vercel/Onrender-like platforms.
 
 ### 🔐 Admin Control Center
 - **Resource Management**: Complete CRUD functionality for Universities and Study Materials.
