@@ -109,4 +109,4 @@ The application should now be running on `http://localhost:5173`.
 Distributed under the MIT License.
 
 ## ✍️ Author
-Project developed and optimized by Antigravity AI.
+Shahana 
